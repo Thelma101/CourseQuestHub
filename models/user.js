@@ -15,10 +15,10 @@ const userInfo = mongoose.model('User', new mongoose.Schema({
         maxlength: 50
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
-        minlength: 11,
-        maxlength: 255,
+        minlength: 10,
+        maxlength: 20,
         unique: true
     },
     email: {
@@ -36,16 +36,31 @@ const userInfo = mongoose.model('User', new mongoose.Schema({
     }
 }));
 
+// function validateUser(user) {
+//     const schema = {
+//         firstname: Joi.string().min(2).max(50).required(),
+//         lastname: Joi.string().min(2).max(50).required(),
+//         phone: Joi.number().min(10).max(50).required(),
+//         email: Joi.string().min(10).max(255).required().email(),
+//         password: Joi.string().min(5).max(255).required()
+//     };
+
 function validateUser(user) {
-    const schema = {
+    const schema = Joi.object({
         firstname: Joi.string().min(2).max(50).required(),
         lastname: Joi.string().min(2).max(50).required(),
-        phone: Joi.number().min(11).max(50).required(),
+        phone: Joi.string().min(10).max(20).required(),
         email: Joi.string().min(10).max(255).required().email(),
         password: Joi.string().min(5).max(255).required()
-    };
-    return Joi.validate(user, schema);
+    });
+    
+    return schema.validate(user);
 }
+
+    // return Joi.validate(user, schema);
+    // const result = schema.validate(user);
+//     return schema.validate(user);
+// }
 
 exports.userInfo = userInfo;
 exports.validate = validateUser;
