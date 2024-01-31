@@ -19,7 +19,6 @@ const userInfo = mongoose.model('User', new mongoose.Schema({
         required: true,
         minlength: 10,
         maxlength: 20,
-        unique: true
     },
     email: {
         type: String,
@@ -36,14 +35,6 @@ const userInfo = mongoose.model('User', new mongoose.Schema({
     }
 }));
 
-// function validateUser(user) {
-//     const schema = {
-//         firstname: Joi.string().min(2).max(50).required(),
-//         lastname: Joi.string().min(2).max(50).required(),
-//         phone: Joi.number().min(10).max(50).required(),
-//         email: Joi.string().min(10).max(255).required().email(),
-//         password: Joi.string().min(5).max(255).required()
-//     };
 
 function validateUser(user) {
     const schema = Joi.object({
