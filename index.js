@@ -3,7 +3,7 @@ const config = require('config');
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
 const users = require('./routes/users');
-const auth = require('./routes/auth');
+const registration = require('./routes/auth');
 const login = require('./routes/login');
 const logout = require('./routes/logout');
 const changePassword = require('./routes/change-password');
@@ -32,7 +32,7 @@ app.use(express.json());
 
 // CHANGE THIS URL LINK LATER
 app.use('/api/cqh/users', users);
-app.use('/api/cqh/auth', auth);
+app.use('/api/cqh/registration', registration);
 app.use('/api/cqh/login', login);
 app.use('/api/cqh/logout', logout);
 app.use('/api/cqh/change-password', changePassword);
