@@ -43,7 +43,7 @@ app.use('/api/cqh/delete-account', deleteAccount);
 // Error handler middleware at the end
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send('Internal Server Error, check phone number input.');
+    res.status(500).send('Internal Server Error, Check Phone Number Input.');
 });
 
 const port = process.env.PORT || 3000;

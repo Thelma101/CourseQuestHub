@@ -40,15 +40,14 @@ router.post('/', async (req, res) => {
 
 // Return a success response
     res.send(
-         `<p> Thank you for registering with us. Your account has been successfully created.</p>
-        <p> You can access your dashboard using the below link</p>`);
-        
+         `Hello ${firstname}, thank you for registering with us. Your account has been successfully created.
+        You can access your dashboard using the below link`);
 });
 
 function generateWelcomeEmail(firstname, welcomeLink) {
     return `
     <p>Hello ${firstname},</p>
-    <p>Welcome on board! You can access your dashboard via this link:</p>
+    <p>Welcome on board! Your account has been successfully created. You can access your dashboard via this link:</p>
     <a href="${welcomeLink}">${welcomeLink}</a>
     <p>Enjoy!</p> `;
 }
