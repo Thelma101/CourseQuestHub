@@ -5,8 +5,12 @@ const mongoose = require('mongoose');
 const users = require('./routes/users');
 const auth = require('./routes/auth');
 const login = require('./routes/login');
-const forgotPassword = require('./routes/password-auth/forgot-password');
-const resetPassword = require('./routes/password-auth/reset-password');
+const logout = require('./routes/logout');
+const changePassword = require('./routes/change-password');
+const forgotPassword = require('./routes/forgot-password');
+const resetPassword = require('./routes/reset-password');
+const deleteAccount = require('./routes/delete-account');
+
 const express = require('express');
 const app = express();
 
@@ -28,8 +32,11 @@ app.use(express.json());
 app.use('/api/cqh/users', users);
 app.use('/api/cqh/auth', auth);
 app.use('/api/cqh/login', login);
+app.use('/api/cqh/logout', logout);
+app.use('/api/cqh/change-password', changePassword);
 app.use('/api/cqh/forgot-password', forgotPassword);
 app.use('/api/cqh/reset-password', resetPassword);
+app.use('/api/cqh/delete-account', deleteAccount);
 
 // Error handler middleware at the end
 app.use((err, req, res, next) => {

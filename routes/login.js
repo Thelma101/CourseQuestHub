@@ -1,5 +1,3 @@
-// login.js
-
 const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -19,10 +17,6 @@ router.post('/', async (req, res) => {
     let user = await userInfo.findOne({ email: req.body.email });
     if (!user) {
         return res.status(400).send('Incorrect email. Try again!');
-
-        // TODO: Generate and send a reset link to the user's email
-
-        // res.send('Password reset link sent successfully.');
     }
 
     // Then validate the Credentials in MongoDB match
