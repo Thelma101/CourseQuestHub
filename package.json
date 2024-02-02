@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "prestart": "rm package-lock.json && npm install --legacy-peer-deps && npm rebuild bcrypt --build-from-source"
   },
   "keywords": [],
   "author": "Thelma Akpata",
