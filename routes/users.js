@@ -5,8 +5,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    // res.send('Hello CQH!');
-    res.send('../index.html');
+    res.send('Hello CQH!');
+    // res.send('../index.html');
 });
 
 router.post('/', async (req, res, next) => {

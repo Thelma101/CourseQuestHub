@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 
 // Return a success response
     res.send(
-         `Hello ${firstname}, thank you for registering with us. Your account has been successfully created.
+         `Hello, thank you for registering with us. Your account has been successfully created.
         You can access your dashboard using the below link`);
 });
 
