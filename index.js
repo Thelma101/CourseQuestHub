@@ -38,7 +38,7 @@ app.use('/api/cqh/users', users);
 app.use('/api/cqh/registration', registration);
 app.use('/api/cqh/login', login);
 app.use('/api/cqh/logout', logout);
-app.use('/api/cqh/all-user', allUsers);
+app.use('/api/cqh/all-users', allUsers);
 app.use('/api/cqh/change-password', changePassword);
 app.use('/api/cqh/forgot-password', forgotPassword);
 app.use('/api/cqh/reset-password', resetPassword);
