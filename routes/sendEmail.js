@@ -16,7 +16,7 @@ async function sendEmail(to, subject, html) {
             to,
             subject,
             html,
-            text,
+            // text,
         });
 
         console.log('Email sent: ', info.messageId);
