@@ -10,10 +10,12 @@ const changePassword = require('./routes/change-password');
 const forgotPassword = require('./routes/forgot-password');
 const resetPassword = require('./routes/reset-password');
 const deleteAccount = require('./routes/delete-account');
-
+// const googleAuth = require('./routes/google-auth');
 const express = require('express');
 const app = express();
+const { router, passport } = require('./routes/google-auth');
 
+app.use(router);
 
 if (!config.has('PrivateKey')) {
     console.error('Error: PrivateKey is not defined. Config:', config.util.toObject());
@@ -39,6 +41,7 @@ app.use('/api/cqh/change-password', changePassword);
 app.use('/api/cqh/forgot-password', forgotPassword);
 app.use('/api/cqh/reset-password', resetPassword);
 app.use('/api/cqh/delete-account', deleteAccount);
+app.use('/api/cqh/google-auth', googleAuth);
 
 // Error handler middleware at the end
 app.use((err, req, res, next) => {

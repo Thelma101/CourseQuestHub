@@ -3,14 +3,16 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const app = express();
+const router = express.Router();
+const { userInfo } = require('../models/user');
 
 // Initialize passport
 app.use(passport.initialize());
 
 // Set up Google OAuth Strategy
 passport.use(new GoogleStrategy({
-    clientID: 'YOUR_GOOGLE_CLIENT_ID',
-    clientSecret: 'YOUR_GOOGLE_CLIENT_SECRET',
+    clientID: '640739846522-jnufdr2frg4opjcc0fvkqmqa8aj8iqfo.apps.googleusercontent.com',
+    clientSecret: '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',
     callbackURL: 'http://localhost:3000/auth/google/callback'
 },
     (accessToken, refreshToken, profile, done) => {
@@ -34,7 +36,7 @@ app.get('/auth/google/callback',
 // Protected route example
 app.get('/', (req, res) => {
     if (req.isAuthenticated()) {
-        res.send('Welcome to tyour dashboard!');
+        res.send('Welcome to your dashboard!');
     } else {
         res.redirect('/auth/google');
     }
