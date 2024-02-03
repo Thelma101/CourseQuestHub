@@ -2,12 +2,10 @@ const express = require('express');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-const app = express();
 const router = express.Router();
-const { userInfo } = require('../models/user');
 
 // Initialize passport
-app.use(passport.initialize());
+router.use(passport.initialize());
 
 // Set up Google OAuth Strategy
 passport.use(new GoogleStrategy({
@@ -22,10 +20,10 @@ passport.use(new GoogleStrategy({
 ));
 
 // Google OAuth login route
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 // Google OAuth callback route
-app.get('/auth/google/callback',
+router.get('/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/' }),
     (req, res) => {
         // Successful authentication, redirect or respond as needed
@@ -34,7 +32,7 @@ app.get('/auth/google/callback',
 );
 
 // Protected route example
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     if (req.isAuthenticated()) {
         res.send('Welcome to your dashboard!');
     } else {
@@ -42,7 +40,4 @@ app.get('/', (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = router;

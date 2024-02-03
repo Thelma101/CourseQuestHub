@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQH Google OAuth Test</title>
+</head>
+<body>
+    <h1>Google OAuth Test</h1>
+    <button onclick="startGoogleAuth()">Sign up with Google</button>
+
+    <script>
+        function startGoogleAuth() {
+            // Update with your Google OAuth client ID and redirect URI
+            const clientId = '640739846522-jnufdr2frg4opjcc0fvkqmqa8aj8iqfo.apps.googleusercontent.com';
+            const redirectUri = 'http://localhost:3000/auth/google/callback';
+
+            const authUrl = `https://accounts.google.com/o/oauth2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&scope=profile%20email&response_type=code&access_type=offline`;
+
+
+            window.open(authUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
