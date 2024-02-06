@@ -10,8 +10,9 @@ const changePassword = require('./routes/change-password');
 const forgotPassword = require('./routes/forgot-password');
 const resetPassword = require('./routes/reset-password');
 const deleteAccount = require('./routes/delete-account');
-const googleAuth = require('./routes/google-auth');
-// const googleAuthRouter = require('./routes/google-auth');
+// const googleAuth = require('./routes/google-auth');
+const coursesApp = require('./routes/courses/coursesRoute');
+// const googleAuth = require('./routes/google-auth');
 const contactUs = require('./routes/contact-us');
 
 const passport = require('passport');
@@ -43,8 +44,9 @@ app.use('/api/cqh/change-password', changePassword);
 app.use('/api/cqh/forgot-password', forgotPassword);
 app.use('/api/cqh/reset-password', resetPassword);
 app.use('/api/cqh/delete-account', deleteAccount);
-app.use('/api/cqh/google-auth', googleAuth);
+// app.use('/api/cqh/google-auth', googleAuth);
 app.use('/api/cqh/contact-us', contactUs);
+app.use('/api/cqh/courses-app', coursesApp);
 
 
 
