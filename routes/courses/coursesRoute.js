@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const courseDatabase = require('../../models/courses-database');
+// const courseDatabase = require('../../models/courses-database');
 
 // Get all departments
 router.get('/departments', (req, res) => {
