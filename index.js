@@ -31,7 +31,7 @@ mongoose.connect('mongodb+srv://coursequesthub:fePziw-bewbaz-5cofme@cluster0.lss
     .then(() => console.log('Now connected to MongoDB!'))
     .catch(err => console.error('Something went wrong', err));
 
-
+app.use(cors()); 
 app.use(express.json());
 
 // CHANGE THIS URL LINK LATER
