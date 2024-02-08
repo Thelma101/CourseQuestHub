@@ -13,7 +13,7 @@ const resetPassword = require('./routes/reset-password');
 const deleteAccount = require('./routes/delete-account');
 // const googleAuth = require('./routes/google-auth');
 const coursesApp = require('./routes/courses/coursesRoute');
-const contactUs = require('./routes/contact-us');
+const contactUs = require('./routes/contactUs/contact-us');
 
 const passport = require('passport');
 
