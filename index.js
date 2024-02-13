@@ -18,6 +18,9 @@ const contactUs = require('./routes/contactUs/contact-us');
 const passport = require('passport');
 
 const app = express();
+app.use(cors()); 
+app.use(express.json());
+
 
 if (!config.has('PrivateKey')) {
     console.error('Error: PrivateKey is not defined. Config:', config.util.toObject());
@@ -25,14 +28,11 @@ if (!config.has('PrivateKey')) {
 }
 
 
-// mongoose.connect('mongodb://localhost:27017/CourseQuestHub', { useNewUrlParser: true, useUnifiedTopology: true })
+// mongoose.connect('mongodb://localhost:27017/Tee', { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.connect('mongodb+srv://coursequesthub:fePziw-bewbaz-5cofme@cluster0.lssixvh.mongodb.net/CourseQuestHub', { useNewUrlParser: true, useUnifiedTopology: true })
 
     .then(() => console.log('Now connected to MongoDB!'))
     .catch(err => console.error('Something went wrong', err));
-
-app.use(cors()); 
-app.use(express.json());
 
 // CHANGE THIS URL LINK LATER
 app.use('/api/cqh/users', users);
