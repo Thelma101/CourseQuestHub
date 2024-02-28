@@ -15,6 +15,7 @@ welcomeToken = crypto.randomBytes(15).toString('base64url');
 
 
 router.post('/', async (req, res) => {
+    try{
     // First Validate The Request
     const { error } = validate(req.body);
     if (error) {
@@ -28,7 +29,7 @@ router.post('/', async (req, res) => {
     }
 
     // Insert the new user if they do not exist yet
-    user = new userInfo(_.pick(req.body, ['firstname', 'lastname', 'phone', 'email', 'password']));
+    user = new userInfo(_.pick(req.body, ['firstname', 'lastname', 'email',  'phone', 'password']));
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
     await user.save();
@@ -39,9 +40,12 @@ router.post('/', async (req, res) => {
 // res.send(emailSent);
 
 // Return a success response
-    res.send(
-         `Hello, thank you for registering with us. Your account has been successfully created.
-        You can access your dashboard using the below link`);
+
+res.status(200).json({ message: 'Hello, thank you for registering with us. Your account has been successfully created.' });
+} catch (error) {
+    console.error('Registration failed:', error);
+    res.status(500).json({ error: 'An unexpected error occurred. Please try again later.' });
+}
 });
 
 function generateWelcomeEmail(firstname, welcomeLink) {
