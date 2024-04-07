@@ -53,7 +53,7 @@ export function LoginForm () {
                 </Col>
                 <Col md="auto">
                     <div >
-                        <a href="">Forgot Password</a>
+                        <a href="#" alt="password" >Forgot Password</a>
                     </div>
                 </Col>
             </Row>

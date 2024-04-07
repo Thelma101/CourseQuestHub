@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./signup.module.scss";
-import { NavLink as Link } from "react-router-dom";
+// import { NavLink as Link } from "react-router-dom";
 
 export const Signup = () => {
   return (

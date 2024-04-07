@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import {LoginForm} from "../LoginPage/LoginForm";
 import { Sideimage } from "../SignupPage/Sideimage";
-import { Navbar } from "../../Navbar";
+// import { Navbar } from "../../Navbar";
 import { Sideimagelogin } from "./SideimageLogin";
 
 
