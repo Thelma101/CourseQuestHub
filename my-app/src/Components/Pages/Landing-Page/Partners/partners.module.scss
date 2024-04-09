@@ -1,0 +1,50 @@
+.testimonialsContainer{
+    margin: 75px;
+    font-weight: 700;
+
+    
+    &>*{
+        margin: 25px;
+        text-align: center;
+    }
+}
+
+.QuoteText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #3173C8;
+
+    &>p>span{
+        display: block;
+    }
+}
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .testimonialsContainer{
+        margin: 70px 30px;
+    }    
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .testimonialsContainer{
+        margin: 70px 40px;
+    } 
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+      
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+
+}
+
+// @media (min-width: 1200px) and (max-width: 1440px) {
+
+// }
+
+@media (min-width: 1440px) {
+
+
+}

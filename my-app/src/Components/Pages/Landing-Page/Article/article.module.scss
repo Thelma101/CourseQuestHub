@@ -1,0 +1,66 @@
+.articleContainer{
+    margin: 80px;
+    
+    &>h2{
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.articleTextContainer{
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    gap: 130px;
+
+    &>*{
+        margin: 40px 0px;
+    }
+}
+
+.articleTopic{
+    color: #3173C8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+// Media Queries
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .articleContainer{
+        margin: 70px 30px;
+        
+        &>h2{
+            text-align: center;
+          
+        }
+    }
+
+    .articleTextContainer{
+        display: block;
+        
+    }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .articleTextContainer{
+        display: block;
+        
+    }
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+}
+
+@media (min-width: 1440px) {
+
+}

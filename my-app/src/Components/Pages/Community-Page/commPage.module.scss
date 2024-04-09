@@ -1,0 +1,44 @@
+.communityContainer{
+    display: flex;
+}
+
+.communityChannelsContainer{
+    background: #3173C8;
+    padding: 1rem;
+    color: #fff;
+}
+
+.communityChannels{
+    margin: 1rem;
+    padding: 0.2rem;
+    cursor: pointer;
+
+    // &>*{
+    //     padding: 10px 0;
+    // }
+
+}
+
+
+// Welcome to CQH texts
+.CommunityContents{
+    margin: 6rem 4rem;
+    text-align: center;
+
+    &>.CommunityWelcome{
+        color: #3173C8;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media ((min-width: 320px) and (max-width: 768px)) {
+    .communityContainer {
+      display: block;
+    }
+
+    .menuToggle {
+        cursor: pointer;
+    }
+}

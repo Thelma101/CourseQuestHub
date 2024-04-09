@@ -1,0 +1,90 @@
+.visionContainer{
+    background: #3173C8;
+    display: flex;
+    color: #fff;
+}
+
+.visionText {
+text-align: center;
+font-weight: 600;
+margin: 0px 30px;
+
+&>*{
+    margin: unset;
+    margin: 50px 20px;
+}
+
+}
+
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .visionContainer{
+    display: block;
+    
+    }
+   
+    .workman{
+        width: 120px; 
+    }
+
+    .visionText {
+        margin: 15px;
+
+        &>*{
+            margin: unset;
+            padding: 15px ;
+        }
+      
+        }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .workman{
+        margin: 60px auto;
+        // width: 250px;
+        // height: 150px;
+        
+    }
+
+    .visionText {
+        margin: 15px 20px;   
+        }
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+    .workman img{
+        width: 420px;
+        height: 400px;     
+    }
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+.visionContainer{
+    gap: 60px;
+}
+
+.visionText {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 10px 40px;
+    
+    &>*{
+        padding-bottom: 30px;
+    }
+    }
+
+    .workman{
+        width: 700px;
+        height: 584px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+
+}

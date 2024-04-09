@@ -1,0 +1,74 @@
+.welcomebg{
+    background: #023;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 35px; 
+
+    &>.welcomeContainer{
+        margin: 0px;
+        margin-top: 60px;
+        text-align: center;   
+
+        
+        
+        &>.welcomeText{
+            &>h2{
+                margin: 0px;
+            }
+            
+        }
+    }
+    
+}
+
+.register{
+    background: #FAB03C;
+    text-align: center;
+    padding: 12px 70px; 
+    border: none; 
+    border-radius: 30px;
+}
+
+.studentImg{
+    width:550px;
+    margin-bottom: 25px;
+}
+
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .register{
+        padding: 10px 35px;
+        margin-bottom: 15px; 
+
+    }
+
+    .studentImg{
+        width:200px;
+    }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .studentImg{
+        width:380px;
+       
+    }
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+
+
+}
+
+@media (min-width: 1440px) {
+
+}

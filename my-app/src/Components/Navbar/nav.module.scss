@@ -1,0 +1,125 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: #ffffffed;
+    height: 80px;
+    padding: 10px 15px;
+
+    &>.logo >p{
+        margin-bottom: 0px;
+    }
+
+    &>* {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navloginButton {
+    margin: 10px;
+    border: 1px solid #023;
+    border-radius: 30px;
+    padding: 5px 20px ;
+    background: #F5F5F5;
+
+    &:hover{
+        background: #023;
+        color: #fff;
+    }
+}
+      
+.navregButton {
+    margin: 10px;
+    border: 1px solid #023;
+    border-radius: 30px;
+    padding: 5px 12px ;
+    background: #FAB03C;
+
+    &:hover{
+        background: #023;
+        color: #fff;
+    }
+}
+   
+.navButton>* {
+font-weight: bolder;
+text-align: center;
+
+}
+
+.mobileMenu > *{
+    display: none;
+}
+
+.logo{
+    font-weight: 700;
+    
+}
+
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .navContainer {
+        margin: 0px;
+        gap: 3px;
+        padding: 0px;
+        height: 60px;
+  
+
+    }
+
+    .navButton>* {
+        margin: 0px 5px;
+    }
+
+    .navloginButton {
+        margin: 2px 0px;
+        padding: 5px 10px ;
+        display: none;
+    }
+
+    .navregButton {
+        margin: 2px 0px;
+        padding: 5px 10px ;
+    }
+
+    .mobileMenu{    
+        width: 200px;
+   }
+
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .mobileMenu{
+        width: 350px;
+   }
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+    .mobileMenu{
+        width: 400px;
+   }
+}
+
+@media ((min-width: 1025px) and (max-width: 1200px)) {}
+
+@media (min-width: 1201px) {}
+
+
+// Mobile Menu responsiveness
+@media ((min-width: 320px) and (max-width: 1024px)) {
+    .mobileMenu{
+        position: absolute;
+        padding:45px 16px;
+        border-radius: 12px;
+        background: #3173C8;
+        box-shadow: 0px 4px 8px 0px #000000bb;
+        top: 80px;
+        right: 35px;
+        z-index: 1000;
+        text-align: center;   
+   } 
+
+}

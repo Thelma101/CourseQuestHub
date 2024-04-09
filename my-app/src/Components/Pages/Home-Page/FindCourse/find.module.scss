@@ -1,0 +1,48 @@
+.StepsContainer{
+    margin: 3em 5em;
+
+    &>h3{
+        text-align: center;
+    }
+
+    &>.course{
+        border: 1px solid #3771C8;
+        // width: 120px;
+        height: 120px;
+        display: grid;
+        grid-template-columns: repeat(200px 1fr);
+        margin-bottom: 10px;
+    
+    }
+
+}
+
+
+
+// Media Queries
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+   
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+
+
+}
+
+@media (min-width: 1440px) {
+ 
+
+}

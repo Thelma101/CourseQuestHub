@@ -1,0 +1,96 @@
+.missionContainer{
+    background: #3173C8;
+    display: flex;
+    align-items: center;
+    color: #fff; 
+}
+
+.MissionText {
+text-align: center;
+font-weight: 600;
+margin: 0px 30px;
+
+&>*{
+    margin: unset;
+    margin: 50px 20px;
+}
+
+}
+
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+    .missionContainer{
+    display: block;
+    
+    }
+   
+    .scientistImg{
+        width: 100px;
+        height: 90px;
+        
+    }
+
+    .MissionText {
+        margin: 15px;
+
+        &>*{
+            margin: unset;
+            padding: 15px ;
+        }
+      
+        }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+    .scientist img{
+        width: 200px;
+        height: 200px;
+        // margin: 60px auto;
+        
+    }
+}
+
+@media ((min-width: 769px) and (max-width: 1024px)) {
+    .scientistImg{
+        width: 400px;
+        height: 400px;
+        // margin: 60px auto;
+    }
+}
+
+@media ((min-width: 1025px) and (max-width: 1440px)) {
+    .scientistImg{
+        width: 657px;
+        height: 584px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+.missionContainer{
+    gap: 60px;
+}
+
+.MissionText {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 10px 40px;
+    
+    &>*{
+        padding-bottom: 30px;
+    }
+    }
+
+.scientistImg{
+    width: 657px;
+    height: 584px;
+}
+
+}
+
+@media (min-width: 1440px) {
+    .scientistImg{
+        width: 757px;
+        height: 684px;
+    }
+}

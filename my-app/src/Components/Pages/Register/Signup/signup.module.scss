@@ -1,0 +1,50 @@
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 40px;
+}
+
+.formbody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.Reg{
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 25px;
+    width: 80%;
+}
+
+.regbutton{
+    background-color: #3173C8 ;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+    max-width: 200px;
+    width: 60%;
+}
+
+.terms input, .terms label{
+    width: fit-content;
+    font-size: small;
+}
+

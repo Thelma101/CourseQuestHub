@@ -1,0 +1,33 @@
+.GreetingContainer {
+    padding: 15px;
+    background-color: #023;
+    color: #fff;
+    text-align: center;
+
+    
+}
+
+.greetingText{
+    padding-top: 40px;
+
+    &>*{
+        padding-bottom: 15px
+    }
+}
+
+.register{
+    background: #FAB03C;
+    text-align: center;
+    padding: 15px 70px; 
+    border: none; 
+}
+
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+ 
+}
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendations</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+
+    <h1>Career Path Recommendation Survey</h1>
+    <form id="careerForm">
+        <div>
+            <p>1. Subjects Enjoyed:</p>
+            <input type="radio" name="subjects" value="mathematics" id="mathematics"> Mathematics
+            <input type="radio" name="subjects" value="english" id="english"> English Language
+            <input type="radio" name="subjects" value="sciences" id="sciences"> Sciences
+            <input type="radio" name="subjects" value="social_sciences" id="social_sciences"> Social Sciences
+            <input type="radio" name="subjects" value="arts" id="arts"> Arts
+        </div>
+        <div>
+            <p>2. Interest Areas:</p>
+            <input type="radio" name="interest_areas" value="healthcare" id="healthcare"> Healthcare and Medicine
+            <input type="radio" name="interest_areas" value="engineering" id="engineering"> Engineering and Technology
+            <input type="radio" name="interest_areas" value="business" id="business"> Business and Management
+            <input type="radio" name="interest_areas" value="humanities" id="humanities"> Arts and Humanities
+            <input type="radio" name="interest_areas" value="law" id="law"> Law and Justice
+        </div>
+
+        <div>
+            <p>3. Learning Preference:</p>
+            <input type="radio" name="learning_preference" value="practical" id="practical"> Hands-on Practical Work
+            <input type="radio" name="learning_preference" value="theoretical" id="theoretical"> Theoretical Learning
+        </div>
+
+        <div>
+            <p>4. Problem-Solving Activities:</p>
+            <input type="radio" name="problem_solving_activities" value="analytical" id="analytical"> Analyzing Data and
+            Solving Mathematical Problems
+            <input type="radio" name="problem_solving_activities" value="technology" id="technology"> Exploring and
+            Experimenting with Technology
+            <input type="radio" name="problem_solving_activities" value="business_challenges" id="business_challenges">
+            Solving Real-world Business Challenges
+            <input type="radio" name="problem_solving_activities" value="creativity" id="creativity"> Expressing
+            Creativity Through Art or Writing
+            <input type="radio" name="problem_solving_activities" value="debate" id="debate"> Debating and Discussing
+            Societal Issues
+        </div>
+        <div>
+            <p>5. Preferred Career Paths:</p>
+            <input type="radio" name="preferred_career_paths" value="doctor" id="doctor"> Doctor or Healthcare
+            Professional
+            <input type="radio" name="preferred_career_paths" value="engineer" id="engineer"> Engineer or Technologist
+            <input type="radio" name="preferred_career_paths" value="entrepreneur" id="entrepreneur"> Entrepreneur or
+            Business Owner
+            <input type="radio" name="preferred_career_paths" value="artist" id="artist"> Artist or Creative
+            Professional
+            <input type="radio" name="preferred_career_paths" value="lawyer" id="lawyer"> Lawyer or Legal Professional
+        </div>
+
+        <div>
+            <p>6. Work Environment Preference:</p>
+            <input type="radio" name="work_environment_preference" value="hospital" id="hospital"> Hospital or Clinic
+            <input type="radio" name="work_environment_preference" value="laboratory" id="laboratory"> Laboratory or
+            Research Facility
+            <input type="radio" name="work_environment_preference" value="office" id="office"> Office or Corporate
+            Setting
+            <input type="radio" name="work_environment_preference" value="studio" id="studio"> Studio or Creative Space
+            <input type="radio" name="work_environment_preference" value="courtroom" id="courtroom"> Courtroom or Legal
+            Office
+        </div>
+
+        <div>
+            <p>7. Motivation in Studies and Career:</p>
+            <input type="radio" name="motivation" value="helping" id="helping"> Helping Others and Making a Positive
+            Impact on Society
+            <input type="radio" name="motivation" value="problem_solving" id="problem_solving"> Solving Complex Problems
+            and Challenges
+            <input type="radio" name="motivation" value="project_management" id="project_management"> Building and
+            Managing Projects or Businesses
+            <input type="radio" name="motivation" value="expression" id="expression"> Expressing Myself Creatively and
+            Artistically
+            <input type="radio" name="motivation" value="advocacy" id="advocacy"> Advocating for Justice and Fairness
+        </div>
+
+        <div>
+            <p>8. Importance of Financial Stability:</p>
+            <input type="radio" name="financial_stability" value="very_important" id="very_important"> Very Important
+            <input type="radio" name="financial_stability" value="important" id="important"> Important
+            <input type="radio" name="financial_stability" value="not_concerned" id="not_concerned"> Not a Major Concern
+        </div>
+
+        <div>
+            <p>9. Interest in Further Education:</p>
+            <input type="radio" name="further_education" value="university" id="university"> Interested in University
+            Degree
+            <input type="radio" name="further_education" value="workforce" id="workforce"> Prefer Entering the Workforce
+            Directly
+        </div>
+
+        <div>
+            <p>10. Extracurricular Activities:</p>
+            <input type="radio" name="extracurricular_activities" value="science_math" id="science_math"> Science or
+            Math Club
+            <input type="radio" name="extracurricular_activities" value="robotics_coding" id="robotics_coding"> Robotics
+            or Coding Club
+            <input type="radio" name="extracurricular_activities" value="debate_speaking" id="debate_speaking"> Debate
+            or Public Speaking Club
+            <input type="radio" name="extracurricular_activities" value="art_drama" id="art_drama"> Art or Drama Club
+            <input type="radio" name="extracurricular_activities" value="community_service" id="community_service">
+            Community Service or Volunteer Work
+        </div>
+
+        <div>
+            <p>11. Skills or Talents:</p>
+            <input type="radio" name="skills_talents" value="analytical_skills" id="analytical_skills"> Strong
+            Analytical and Problem-solving Skills
+            <input type="radio" name="skills_talents" value="technical_skills" id="technical_skills"> Technical Skills
+            in Using Computers and Technology
+            <input type="radio" name="skills_talents" value="leadership_skills" id="leadership_skills"> Leadership and
+            Organizational Skills
+            <input type="radio" name="skills_talents" value="creative_abilities" id="creative_abilities"> Creative and
+            Artistic Abilities
+            <input type="radio" name="skills_talents" value="communication_skills" id="communication_skills">
+            Communication and Persuasion Skills
+        </div>
+
+        <div>
+            <p>12. Long-term Career Goals:</p>
+            <input type="radio" name="long_term_career_goals" value="discoveries" id="discoveries"> Making
+            Groundbreaking Discoveries in Science or Medicine
+            <input type="radio" name="long_term_career_goals" value="innovation" id="innovation"> Innovating New
+            Technologies and Solutions
+            <input type="radio" name="long_term_career_goals" value="business_success" id="business_success"> Building
+            and Leading Successful Businesses
+            <input type="radio" name="long_term_career_goals" value="creative_impact" id="creative_impact"> Creating
+            Impactful Works of Art or Literature
+            <input type="radio" name="long_term_career_goals" value="social_justice" id="social_justice"> Advocating for
+            Social Justice and Legal Reforms
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('careerForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Check if all questions are answered
+            const answers = {};
+            // const answers = {tags:[]};
+            const radioButtons = document.querySelectorAll('input[type=radio]:checked');
+
+            // if (radioButtons.length !== 12) {
+            //     alert('Please answer all questions.');
+            //     return;
+            // }
+
+            // Collect selected options
+            radioButtons.forEach(function (radioButton) {
+                // answers.tags.push(radioButton.id);
+                answers[radioButton.name] = radioButton.value;
+            });
+            console.log(answers);
+
+            // Send POST request with user answers
+            fetch('http://localhost:5000/survey/recommendations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    // mode: 'no-cors',
+                    body: JSON.stringify(answers)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Server response:', data);
+                    alert('Your career recommendation has been submitted successfully!');
+                })
+                .catch(error => {
+                    console.error('There was a problem with your fetch operation:', error);
+                    alert('There was an error submitting your answers. Please try again later.');
+                });
+        });
+    </script>
+
+</body>
+
+</html>
